@@ -1,0 +1,76 @@
+
+
+.scheduleNav {
+    height: 66rem;
+    background-color: var(--whiteColor);
+    border: 32px solid var(--colorOne);
+    padding: 3rem;
+}
+
+.scheduleNav nav {
+    margin: 2.5rem;
+}
+
+.scheduleBox {
+    display: flex;
+    position: relative;
+}
+
+.scheduleNav .rightSection::before {
+    content: "";
+    position: absolute;
+    left: -3em;
+    top: 2em;
+    width: 2px;           
+    height: 44em;        
+    background: black; 
+    border-radius: 2px;
+}
+
+.scheduleNav p,
+.scheduleNav span {
+    font-size: 1.5em;
+}
+
+.leftSection span  {
+    margin-left: 2em;
+}
+
+.rightSection span  {
+    margin-right: 1em;
+    margin-top: 1em;
+    float: right;
+}
+
+.scheduleNav h3{
+    text-align: center;
+    font-family: var(--Marcellus);
+    font-size: 4em;
+    font-weight: normal;
+
+}
+
+.scheduleNav nav h4 {
+    display: inline-block;
+    font-family: var(--Marcellus);
+    font-size: 3.5em;
+    font-weight: normal;
+    margin-bottom: .6em;
+}
+
+.scheduleNav nav h5{
+    font-family: var(--Crimson);font-size: 1.5em;
+    font-size: 1.5em;
+}
+
+.scheduleNav nav a {
+    color: black;
+    font-size: 1.5em;
+
+}
+
+.leftSection,
+.rightSection {
+    flex: 1;
+    position: relative;
+}

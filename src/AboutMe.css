@@ -1,0 +1,37 @@
+.about-me{
+    background-image: url('yogaphoto/37297c4e-696b-4b2e-9243-7f416201c30e.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center 50%;
+    height: 64rem;
+    display: flex;
+    align-items: center;
+    padding: 3em;
+    padding-left: 6em;
+}
+
+.about-me h2 {
+    font-family: var(--Marcellus);
+    color: var(--whiteColor);
+    font-size: 3em;
+    padding-bottom: .8em;
+}
+
+.about-me p,
+.about-me ul li  {
+    font-family: var(--CrimsonPro);
+    color: var(--whiteColor);
+    font-size: 1.2em;
+}
+.innerText {
+    padding-bottom: 1em;
+}
+
+.aboutMeText{
+    width: 48rem;
+    
+}
+
+.about-me ul li {
+    margin-left: 1em;
+}

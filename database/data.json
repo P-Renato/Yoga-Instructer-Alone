@@ -1,0 +1,98 @@
+{
+  "schedule": [
+    {
+      "id": 1,
+      "subject":"mindfulness Yoga",
+      "day": "Monday 05.01.2025",
+      "time": "12:00-13:00",
+      "branch": 1,
+      "address": "Glogauer Straße 19 Kreuzberg 10999 Berlin"
+    },
+     {
+      "id": 2,
+      "subject":"EVEnt: mindfulness and Movie Yoga",
+      "day": "Wednesdays 07.01.2025",
+      "time": "12:00-13:00",
+      "branch": 1,
+      "address": "Glogauer Straße 19 Kreuzberg 10999 Berlin"
+    },
+    {
+      "id": 3,
+      "subject":"Yin Yoga",
+      "day": "Friday 09.01.2025",
+      "time": "18:00-19:00",
+      "branch": 2,
+      "address": "Glogauer Straße 32 Kreuzberg 10999 Berlin"
+    }
+  ],
+  "blog": [
+    {
+      "id": 1,
+      "title": "Create a good relationship with your chakras",
+      "content": "Create a harmonious relationship with your chakras to cultivate balance, self-awareness, and inner peace....",
+      "createdDay": "30.01.2025",
+      "img": "yogaphoto/5ab014e1-82ef-43e8-a6df-a9d1e56da53b.png"
+    },
+    {
+      "id": 2,
+      "title": "Participated in a meditation seminar",
+      "content": "Create a harmonious relationship with your chakras to cultivate balance, self-awareness, and inner peace....",
+      "createdDay": "17.01.2025",
+      "img": "yogaphoto/23ebdcb8-22a5-4fa8-9390-dfa0917fcb68 2.png"
+    },
+    {
+      "id": 3,
+      "title": "Living with Nature",
+      "content": "Create a harmonious relationship with your chakras to cultivate balance, self-awareness, and inner peace....",
+      "createdDay": "15.01.2025",
+      "img": "yogaphoto/11f1731b-2c94-43ad-9a5a-f5d217a7ece8.png"
+    },
+    {
+     "id": 4,
+      "title": "Adjusting your body to the length of the Day",
+      "content": "Create a harmonious relationship with your chakras to cultivate balance, self-awareness, and inner peace....",
+      "createdDay": "23.01.2025",
+      "img": "yogaphoto/e8bb2985-c52e-4375-996f-d155e0422493.png"
+    },
+    {
+      "id": 5,
+      "title": "Participated in a meditation seminar",
+      "content": "Create a harmonious relationship with your chakras to cultivate balance, self-awareness, and inner peace....",
+      "createdDay": "17.01.2025",
+      "img": "yogaphoto/d8ad3e34-d319-4bed-a0a1-1bff896a14e0.png"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "content": "This class is an invitation to release the Christmas days and to come back to yourself through meditation and ecstatic movement. The year is nearly over – what do you want to let go of?  What do you want to keep? This event is a celebration of our 2024. Through meditative movement and ecstatic dance we will wander through different aspects of our being. We will create and feel the symbiosis of stillness and chaos. From awareness to chaos to inner peace – a journey like life.",
+      "title": "END OF THE YEAR SPECIAL: THE ART OF LETTING GO – ECSTASY AND MEDITATION",
+      "location":"KREUZBERG STUDIO",
+      "createdDay": "28.12.2024 12:00-13:00"
+    },
+    {
+       "id": 2,
+      "content": "Join this transformative 2.5-hour workshop celebrating community and new beginnings during the fifth Rauhnacht. This unique session invites everyone to explore connection and shared wisdom as we welcome the new year.",
+      "title": "RAUHNACHT SPECIAL: CELEBRATING COMMUNITY",
+      "location":"ABC STUDIO",
+      "createdDay": "28.12.2024 14:00-15:00"
+    },
+    {
+      "id": 3,
+      "content": "Join this transformative 2.5-hour workshop celebrating community and new beginnings during the fifth Rauhnacht. This unique session invites everyone to explore connection and shared wisdom as we welcome the new year.",
+      "title": "END OF THE YEAR SPECIAL: THE ART OF LETTING GO – ECSTASY AND MEDITATION",
+      "location":"KREUZBERG STUDIO",
+      "createdDay": "28.12.2024 12:00-13:00"
+    }
+  ],
+  "locations" : [
+    {
+        "id":1,
+        "name":"Peace Yoga Studio"
+    },
+    {
+        "id":2,
+        "name":"Yellow yoga"
+    }
+  ]
+}

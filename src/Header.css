@@ -1,0 +1,77 @@
+
+.header {
+  background-image: url('yogaphoto/3e42f69f-0f37-4b51-bb1e-08d08bae7dcc.png');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center 70%;
+  height: 80rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 8rem;
+}
+
+.header h1 {
+  font-family: var(--Marcellus);
+  color: #F5F5F5;
+  font-size: 72px;
+}
+
+.header a {
+  font-family: var(--CrimsonPro);
+  color: #F5F5F5;
+  list-style: none;
+  text-decoration-line: none;
+  font-size: 36px;
+}
+
+.header button {
+  font-size: 40px;
+  font-family: var(--CrimsonPro);
+  color: var(--colorFour);
+  border-color: var(--colorSix);
+  border-radius: 30px;
+  height: 3.6rem;
+  width: 24.2rem;
+}
+
+.navBar {
+    width: 55%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10rem;
+}
+
+.headerText {
+    height: 16.5rem;
+    background-color: var(--colorTwo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerText p {
+    font-family: var(--CrimsonPro);
+    color: var(--whiteColor);
+    position: relative;
+    padding-left: 2.5rem; 
+    font-size: 1.5em;
+}
+
+.headerText p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1em;
+    width: 2px;           
+    height: 5em;        
+    background: var(--whiteColor); 
+    border-radius: 2px;
+}
+
+.navBar a:hover {
+  text-decoration: underline;
+}
