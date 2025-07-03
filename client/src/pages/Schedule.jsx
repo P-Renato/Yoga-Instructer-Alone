@@ -1,5 +1,5 @@
-import "./App.css";
-import "./Schedule.css";
+import "../App.css";
+import "./styles/Schedule.css";
 
 export default function Schedule () {
     return (

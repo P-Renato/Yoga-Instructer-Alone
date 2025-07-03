@@ -1,5 +1,5 @@
-import "./App.css";
-import "./AboutMe.css";
+import "../App.css";
+import "./styles/AboutMe.css";
 
 export default function AboutMe() {
     return (
