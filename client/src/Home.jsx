@@ -1,5 +1,5 @@
 import "./App.css";
-import "./Header.css";
+import "./Home.css";
 
 
 export default function Header () {

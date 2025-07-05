@@ -31,35 +31,40 @@
       "title": "Create a good relationship with your chakras",
       "content": "Create a harmonious relationship with your chakras to cultivate balance, self-awareness, and inner peace....",
       "createdDay": "30.01.2025",
-      "img": "yogaphoto/5ab014e1-82ef-43e8-a6df-a9d1e56da53b.png"
+      "category": "Philosophy",
+      "img": "/src/pages/public/5ab014e1-82ef-43e8-a6df-a9d1e56da53b.png"
     },
     {
       "id": 2,
       "title": "Participated in a meditation seminar",
       "content": "Create a harmonious relationship with your chakras to cultivate balance, self-awareness, and inner peace....",
       "createdDay": "17.01.2025",
-      "img": "yogaphoto/23ebdcb8-22a5-4fa8-9390-dfa0917fcb68 2.png"
+      "category": "Yoga life",
+      "img": "/src/pages/public/23ebdcb8-22a5-4fa8-9390-dfa0917fcb68 2.png"
     },
     {
       "id": 3,
       "title": "Living with Nature",
       "content": "Create a harmonious relationship with your chakras to cultivate balance, self-awareness, and inner peace....",
       "createdDay": "15.01.2025",
-      "img": "yogaphoto/11f1731b-2c94-43ad-9a5a-f5d217a7ece8.png"
+      "category": "Meditation",
+      "img": "/src/pages/public/11f1731b-2c94-43ad-9a5a-f5d217a7ece8.png"
     },
     {
      "id": 4,
       "title": "Adjusting your body to the length of the Day",
       "content": "Create a harmonious relationship with your chakras to cultivate balance, self-awareness, and inner peace....",
       "createdDay": "23.01.2025",
-      "img": "yogaphoto/e8bb2985-c52e-4375-996f-d155e0422493.png"
+      "category": "Psychology",
+      "img": "/src/pages/public/e8bb2985-c52e-4375-996f-d155e0422493.png"
     },
     {
       "id": 5,
       "title": "Participated in a meditation seminar",
       "content": "Create a harmonious relationship with your chakras to cultivate balance, self-awareness, and inner peace....",
       "createdDay": "17.01.2025",
-      "img": "yogaphoto/d8ad3e34-d319-4bed-a0a1-1bff896a14e0.png"
+      "category": "Event",
+      "img": "/src/pages/public/d8ad3e34-d319-4bed-a0a1-1bff896a14e0.png"
     }
   ],
   "events": [

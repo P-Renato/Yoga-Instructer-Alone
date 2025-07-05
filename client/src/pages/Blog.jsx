@@ -48,7 +48,7 @@ export default function Blog () {
                         </span>
                         <h3>{firstPost.title}</h3>
                         <p>{firstPost.content}</p>
-                        <NavLink>Read more...</NavLink>
+                        <NavLink to={`/blog-content/${firstPost.id}`}  key={firstPost.id}>Read more...</NavLink>
                     </nav>
                     </div>
                 </section>
@@ -57,10 +57,10 @@ export default function Blog () {
                     key={groupIndex}
                     className={groupIndex === 0 ? "secondLayout" : "thirdLayout"}
                     >
-                    {group.map((x, i) => (
+                    {group.map((x) => (
                         <nav
                         key={x.id}
-                        className={`container${x.id} container`} // or use `i` if needed
+                        className={`container${x.id} container`} 
                         >
                         <nav>
                             <img src={x.img} alt="Blog-image" />
@@ -68,7 +68,7 @@ export default function Blog () {
                         <nav className="innerTexts">
                             <p>{x.createdDay}</p>
                             <h3>{x.title}</h3>
-                            <NavLink>Read more...</NavLink>
+                            <NavLink to={`/blog-content/${x.id}`} key={x.id}>Read more...</NavLink>
                         </nav>
                         </nav>
                     ))}
