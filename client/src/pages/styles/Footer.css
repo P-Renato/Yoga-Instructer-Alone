@@ -1,0 +1,33 @@
+.footer {
+    margin: 0;
+    height: 7rem;
+    width: 100%;
+    background-color: var(--colorFour);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer > section:first-child {
+    margin-left: 8rem;
+}
+
+.footer > section:last-child {
+    margin-right: 4rem;
+}
+
+.footer p,
+.footer a {
+    font-family: var(--CrimsonPro);
+    color: #F5F5F5;
+    text-decoration: none;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    flex-direction: row;
+}
+

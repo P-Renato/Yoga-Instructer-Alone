@@ -3,6 +3,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import MainPage from './components/Homepage/MainPage';
 import BlogContent from './pages/BlogContent';
+import ErrorPage from './pages/ErrorPage';
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<MainPage />}/>
+        <Route path='/' element={<MainPage />} errorElement={<ErrorPage />} />
         <Route path='blog-content/:id' element={<BlogContent/>}>
           {/* <Route path='/:id' element={<BlogContent />}/> */}
         </Route>

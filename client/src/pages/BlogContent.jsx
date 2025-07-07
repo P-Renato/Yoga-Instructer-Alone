@@ -1,43 +1,30 @@
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { blogContext } from "./BlogContext";
 import "../App.css";
 import "./styles/BlogContent.css"
-import { useEffect, useState } from "react";
 
 
 function BlogContent() {
-  const [allBlogs, setAllBlogs] = useState([]);
-  const [BlogContent, setBlogContent] = useState(null);
   const { id } = useParams();
 
-  useEffect(()=> {
-    fetch('../database/data.json')
-            .then((res) => res.json())
-            .then((data) => {
-              setAllBlogs(data.blog)
-              const foundBlog = data.blog.find((b) => String(b.id) === id);
-                setBlogContent(foundBlog)
-                console.log(foundBlog);
-            })
-  }, [id]);
-
-  if(!BlogContent) return <p>Loading ...</p>;
-
-  const remainingBlogs = allBlogs.filter(b => String(b.id) !== id).slice(0, 3);
-  const remainingCategories = allBlogs.filter(b => String(b.id) !== id);
-
-  
+  // open the context
+  const {blogs} = useContext(blogContext)
+  const foundBlog = blogs.find((b) => String(b.id) === id);
+  const remainingBlogs = blogs.filter(b => String(b.id) !== id).slice(0,3);
+  const remainingCategories = blogs.filter(b => String(b.id) !== id);
 
   return (
     <div className="bg-color">
-      <main className="blog-content" key={BlogContent.id}>
-        <h2>{BlogContent.title}</h2>
-        <p>{BlogContent.createdDay}</p>
-        <p>{BlogContent.category}</p>
-        <img src={BlogContent.img} alt="Image" />
+      <main className="blog-content" key={foundBlog.id}>
+        <h2>{foundBlog.title}</h2>
+        <p>{foundBlog.createdDay}</p>
+        <p>{foundBlog.category}</p>
+        <img src={foundBlog.img} alt="Image" />
       </main>
       <section className="info-section">
-        <h3>Header {BlogContent.id}</h3>
+        <h3>Header {foundBlog.id}</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa. Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non massa enim vitae duis mattis. Vel in ultricies vel fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa. Eu dolor aliquet risus gravida nunc at feugiat consequat purus.</p>
         <ul>
           <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
@@ -62,37 +49,76 @@ function BlogContent() {
         
         {remainingBlogs.map(blg =>(
           <nav className="other-blogs" key={blg.id}>
-          <img src={blg.img} alt="" />
+          <img src={blg.img} alt="blog-image" />
           <h3>{blg.title}</h3>
           <p>Aenean eleifend ante maecenas pulvinar montes lorem et pede dis dolor pretium donec dictum. Vici consequat justo enim. Venenatis eget adipiscing luctus lorem.</p>
-          <NavLink className="read-more" to={`${blg.id}`} key={blg.id}>Read more...</NavLink>
+          <NavLink className="read-more" to={`/blog-content/${blg.id}`} key={blg.id}>Read more...</NavLink>
           <hr />
         </nav>
         ))}
       </section>
 
       {remainingCategories.map(blog => (
-        <section>
-          <h3>{blog.category}</h3>
-            <section>
-              <nav>
+        <section className="category-section-header">
+          <p className="readMore">{blog.category}</p>
+            <section className="category-section">
+              <svg className="my-icon left-icon" viewBox="0 0 38 40" preserveAspectRatio="xMidYMid meet">
+
+
+                <g filter="url(#filter0_d_451_302)">
+                <path d="M4.5 16.5L33.75 32.0885V0.911543L4.5 16.5Z" fill="#E6DFDA"/>
+                </g>
+                <defs>
+                <filter id="filter0_d_451_302" x="0.5" y="0.911621" width="37.25" height="39.1768" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_451_302"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_451_302" result="shape"/>
+                </filter>
+                </defs>
+              </svg>
+
+              <nav className="category-blogs">
               <img src={blog.img} alt="" />
               <p>{blog.createdDay}</p>
               <h4>{blog.title}</h4>
-              <NavLink></NavLink>
+              <NavLink className="read-more">Read more...</NavLink>
             </nav>
-           <nav>
+           <nav className="category-blogs">
               <img src={blog.img} alt="" />
               <p>{blog.createdDay}</p>
               <h4>{blog.title}</h4>
-              <NavLink></NavLink>
+              <NavLink className="read-more">Read more...</NavLink>
             </nav>
-            <nav>
+            <nav className="category-blogs">
               <img src={blog.img} alt="" />
               <p>{blog.createdDay}</p>
               <h4>{blog.title}</h4>
-              <NavLink></NavLink>
+              <NavLink className="read-more">Read more...</NavLink>
             </nav>
+            <svg className="my-icon right-icon" viewBox="0 0 38 40" preserveAspectRatio="xMidYMid meet">
+
+              <g filter="url(#filter0_d_451_312)">
+              <path d="M34 16L4.75 0.411545L4.75 31.5885L34 16Z" fill="#E6DFDA"/>
+              </g>
+              <defs>
+              <filter id="filter0_d_451_312" x="0.75" y="0.411621" width="37.25" height="39.1768" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+              <feOffset dy="4"/>
+              <feGaussianBlur stdDeviation="2"/>
+              <feComposite in2="hardAlpha" operator="out"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_451_312"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_451_312" result="shape"/>
+              </filter>
+              </defs>                   
+            </svg>
+
             </section>
           
         </section>
@@ -103,3 +129,5 @@ function BlogContent() {
 }
 
 export default BlogContent
+
+

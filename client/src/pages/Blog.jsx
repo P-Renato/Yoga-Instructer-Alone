@@ -1,26 +1,16 @@
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { blogContext } from "./BlogContext";
 import "../App.css";
 import "./styles/Blog.css";
-import { useEffect, useState } from "react";
 
 export default function Blog () {
-    const [blogInfo, setBlogInfo] = useState("");
-
-    useEffect(() => {
-        fetch('./database/data.json')
-            .then((res) => res.json())
-            .then((data) => {
-                setBlogInfo(data.blog)
-                console.log(blogInfo)
-            })
-                
-            
-    }, [])
-
-    if(!blogInfo.length) return <p>Loading ...</p>;
-
-    const firstPost = blogInfo[0];
-    const remainingPosts = blogInfo.slice(1);
+    const {blogs} = useContext(blogContext);
+    console.log(blogs)
+    
+    if (!blogs.length) return <p>Loading blog posts...</p>;
+    const firstPost = blogs[0];
+    const remainingPosts = blogs.slice(1);
 
     const groupedPosts = [];
     for (let i = 0; i < remainingPosts.length; i += 2) {
